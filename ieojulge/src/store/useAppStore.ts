@@ -2,7 +2,7 @@
 
 import { create } from "zustand";
 import type { CommunityItem } from "@/data/communityFeed";
-import type { CreationFormat, CreationStyle } from "@/data/contentMap";
+import { getStylePromptTemplate, type CreationFormat, type CreationStyle } from "@/data/contentMap";
 
 export type PanelMode = "idle" | "info" | "create" | "result" | "qr";
 
@@ -11,6 +11,7 @@ type AppState = {
   panelMode: PanelMode;
   selectedStyle: CreationStyle;
   selectedFormat: CreationFormat;
+  promptText: string;
   currentResult: CommunityItem | null;
   generatedItems: CommunityItem[];
   isGenerating: boolean;
@@ -19,6 +20,7 @@ type AppState = {
   setPanelMode: (mode: PanelMode) => void;
   setSelectedStyle: (style: CreationStyle) => void;
   setSelectedFormat: (format: CreationFormat) => void;
+  setPromptText: (prompt: string) => void;
   setCurrentResult: (item: CommunityItem) => void;
   addGeneratedItem: (item: CommunityItem) => void;
   setGenerating: (value: boolean) => void;
@@ -31,14 +33,16 @@ export const useAppStore = create<AppState>((set) => ({
   panelMode: "idle",
   selectedStyle: "starlight-gukak",
   selectedFormat: "image",
+  promptText: getStylePromptTemplate("starlight-gukak"),
   currentResult: null,
   generatedItems: [],
   isGenerating: false,
   error: null,
   setSelectedObject: (id) => set({ selectedObject: id, panelMode: "info", error: null }),
   setPanelMode: (mode) => set({ panelMode: mode, error: null }),
-  setSelectedStyle: (style) => set({ selectedStyle: style }),
+  setSelectedStyle: (style) => set({ selectedStyle: style, promptText: getStylePromptTemplate(style) }),
   setSelectedFormat: (format) => set({ selectedFormat: format }),
+  setPromptText: (prompt) => set({ promptText: prompt }),
   setCurrentResult: (item) => set({ currentResult: item, panelMode: "result", error: null }),
   addGeneratedItem: (item) =>
     set((state) => ({
@@ -55,6 +59,7 @@ export const useAppStore = create<AppState>((set) => ({
       panelMode: "idle",
       selectedStyle: "starlight-gukak",
       selectedFormat: "image",
+      promptText: getStylePromptTemplate("starlight-gukak"),
       currentResult: null,
       error: null
     })

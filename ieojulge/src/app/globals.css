@@ -38,7 +38,8 @@ a {
 
 button,
 input,
-select {
+select,
+textarea {
   font: inherit;
 }
 
@@ -306,17 +307,6 @@ button:disabled {
   margin-top: 2px;
 }
 
-.panel-footer {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 44px;
-  margin-top: 10px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
 .location-line,
 .meta-row {
   display: flex;
@@ -404,6 +394,24 @@ button:disabled {
   gap: 7px;
   min-height: 44px;
   text-align: center;
+}
+
+.prompt-textarea {
+  width: 100%;
+  min-height: 118px;
+  resize: vertical;
+  border: 1px solid rgba(215, 173, 88, 0.28);
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--text);
+  padding: 12px;
+  line-height: 1.55;
+}
+
+.prompt-textarea:focus {
+  border-color: rgba(215, 173, 88, 0.72);
+  box-shadow: 0 0 0 3px rgba(215, 173, 88, 0.12);
 }
 
 .error-text {

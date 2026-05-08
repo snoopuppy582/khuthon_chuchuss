@@ -6,6 +6,7 @@ export type StyleOption = {
   label: string;
   tone: string;
   promptHint: string;
+  promptTemplate: string;
 };
 
 export type MediaVariant = {
@@ -28,19 +29,25 @@ export const styleOptions: StyleOption[] = [
     id: "starlight-gukak",
     label: "별빛 국악",
     tone: "따뜻한 금빛과 국악적 분위기",
-    promptHint: "warm starlight, Korean traditional music mood, elegant gold accents"
+    promptHint: "warm starlight, Korean traditional music mood, elegant gold accents",
+    promptTemplate:
+      "첨성대를 별빛 아래 고요하게 세우고, 신라의 밤과 국악적 분위기가 느껴지는 따뜻한 이미지로 만들어줘."
   },
   {
     id: "cyber-silla",
     label: "사이버 신라",
     tone: "신라 문양과 현대적인 네온 감각",
-    promptHint: "cyber Silla, subtle neon, Korean heritage pattern, cinematic"
+    promptHint: "cyber Silla, subtle neon, Korean heritage pattern, cinematic",
+    promptTemplate:
+      "첨성대를 현대적인 네온 빛과 신라 문양으로 표현하되, 실제 유적의 형태는 존중하는 미래적인 이미지로 만들어줘."
   },
   {
     id: "dream-night",
     label: "몽환적 밤하늘",
     tone: "푸른 밤하늘과 은하수 분위기",
-    promptHint: "dreamlike night sky, milky way, poetic atmosphere, soft glow"
+    promptHint: "dreamlike night sky, milky way, poetic atmosphere, soft glow",
+    promptTemplate:
+      "첨성대 위로 은하수와 별자리가 흐르는 몽환적인 밤하늘을 만들고, 조용하고 시적인 분위기로 표현해줘."
   }
 ];
 
@@ -50,10 +57,10 @@ export const contentMap: Record<CreationStyle, ContentPreset> = {
     songs: [
       {
         id: "cheomseongdae-starlight-song-1",
-        title: "첨성대의 별빛 1",
+        title: "선덕여왕의 별노래",
         src: "/media/cheomseongdae_starlight_song_01.mp3",
         poster: "/media/cheomseongdae_poster_01.svg",
-        description: "첨성대와 별빛을 주제로 만든 오디오 콘텐츠입니다."
+        description: "첨성대와 별빛, 선덕여왕의 밤을 떠올리며 만든 오디오 콘텐츠입니다."
       },
       {
         id: "cheomseongdae-starlight-song-2",
@@ -67,11 +74,12 @@ export const contentMap: Record<CreationStyle, ContentPreset> = {
       {
         id: "cheomseongdae-starlight-film",
         title: "첨성대의 별빛",
-        poster: "/media/cheomseongdae_starlight_story.svg",
-        description: "사전 제작 영상 파일이 들어오기 전까지 쓰는 영상형 백업 장면입니다."
+        src: "/media/cheomseongdae_starlight_film.mp4",
+        poster: "/media/cheomseongdae-hero.png",
+        description: "선덕여왕의 실루엣과 회전하는 별빛으로 첨성대의 밤하늘을 AI 영상으로 상상해봤습니다."
       }
     ],
-    fallbackImages: ["/media/cheomseongdae_poster_01.svg", "/media/community/dummy_galaxy.svg"]
+    fallbackImages: ["/media/cheomseongdae_cute_image.png", "/media/cheomseongdae_poster_01.svg"]
   },
   "cyber-silla": {
     style: "cyber-silla",
@@ -79,7 +87,7 @@ export const contentMap: Record<CreationStyle, ContentPreset> = {
       {
         id: "cyber-silla-rhythm",
         title: "사이버 신라 리듬",
-        src: "/media/cheomseongdae_starlight_gukak.wav",
+        src: "/media/cheomseongdae_starlight_song_02.mp3",
         poster: "/media/cheomseongdae_poster_02.svg",
         description: "신라 문양과 전자음을 결합한다는 설정의 백업 오디오입니다."
       }
@@ -100,7 +108,7 @@ export const contentMap: Record<CreationStyle, ContentPreset> = {
       {
         id: "gyeongju-night-sky",
         title: "경주의 밤하늘",
-        src: "/media/cheomseongdae_starlight_gukak.wav",
+        src: "/media/cheomseongdae_starlight_song_01.mp3",
         poster: "/media/cheomseongdae_poster_03.svg",
         description: "몽환적인 별빛 분위기의 백업 오디오입니다."
       }
@@ -119,6 +127,10 @@ export const contentMap: Record<CreationStyle, ContentPreset> = {
 
 export function getStyleLabel(style: CreationStyle) {
   return styleOptions.find((item) => item.id === style)?.label ?? "별빛 국악";
+}
+
+export function getStylePromptTemplate(style: CreationStyle) {
+  return styleOptions.find((item) => item.id === style)?.promptTemplate ?? styleOptions[0].promptTemplate;
 }
 
 export function getMediaVariant(style: CreationStyle, format: Exclude<CreationFormat, "image">, seed: number) {

@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronRight, MousePointer2, QrCode, Sparkles } from "lucide-react";
+import { ChevronRight, MousePointer2, QrCode } from "lucide-react";
 import { useAppStore } from "@/store/useAppStore";
 import { HeritageInfo } from "./HeritageInfo";
 import { CreationStudio } from "./CreationStudio";
@@ -37,11 +37,6 @@ export function SidePanel() {
       {panelMode === "create" && <CreationStudio />}
       {panelMode === "result" && <ResultDisplay />}
       {panelMode === "qr" && <OfflineConnect />}
-
-      <div className="panel-footer">
-        <Sparkles size={16} />
-        <span>핵심 차별점은 참여입니다.</span>
-      </div>
     </aside>
   );
 }

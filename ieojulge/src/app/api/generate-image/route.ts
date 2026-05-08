@@ -5,6 +5,7 @@ import { buildImagePrompt, hasBlockedTerm } from "@/lib/promptBuilder";
 
 type GenerateImageBody = {
   style?: CreationStyle;
+  customPrompt?: string;
 };
 
 function fallbackResponse(style: CreationStyle, reason: string) {
@@ -20,7 +21,7 @@ function fallbackResponse(style: CreationStyle, reason: string) {
 export async function POST(request: Request) {
   const body = (await request.json().catch(() => ({}))) as GenerateImageBody;
   const style = body.style && contentMap[body.style] ? body.style : "starlight-gukak";
-  const prompt = buildImagePrompt(style);
+  const prompt = buildImagePrompt(style, body.customPrompt);
 
   if (hasBlockedTerm(prompt)) {
     return NextResponse.json({ error: "Blocked prompt" }, { status: 400 });

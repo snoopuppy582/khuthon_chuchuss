@@ -16,29 +16,30 @@ export const communityFeed: CommunityItem[] = [
     id: "dummy-1",
     author: "별을_세는_밤",
     type: "image",
-    title: "첨성대 위의 은하수",
-    src: "/media/community/dummy_galaxy.svg",
-    previewImage: "/media/community/dummy_galaxy.svg",
+    title: "귀여운 첨성대 상상",
+    src: "/media/cheomseongdae_cute_image.png",
+    previewImage: "/media/cheomseongdae_cute_image.png",
     style: "dream-night",
-    description: "첨성대와 은하수를 연결한 백업 이미지 콘텐츠"
+    description: "첨성대를 더 친근하게 느낄 수 있도록 귀여운 분위기로 만든 이미지 콘텐츠"
   },
   {
     id: "dummy-2",
     author: "신라여행자",
     type: "song",
     title: "선덕여왕의 별노래",
-    src: "/media/cheomseongdae_starlight_gukak.wav",
+    src: "/media/cheomseongdae_starlight_song_01.mp3",
     previewImage: "/media/cheomseongdae_poster_01.svg",
     style: "starlight-gukak",
-    description: "국악 분위기를 떠올리게 하는 백업 오디오 콘텐츠"
+    description: "첨성대와 별빛, 선덕여왕의 밤을 떠올리며 만든 오디오 콘텐츠"
   },
   {
     id: "dummy-3",
     author: "경주러버",
     type: "video",
-    title: "네온 신라의 밤",
-    previewImage: "/media/cheomseongdae_cyber_story.svg",
-    style: "cyber-silla",
-    description: "사이버 신라 콘셉트의 백업 영상 콘텐츠"
+    title: "첨성대의 별빛",
+    src: "/media/cheomseongdae_starlight_film.mp4",
+    previewImage: "/media/cheomseongdae-hero.png",
+    style: "starlight-gukak",
+    description: "선덕여왕의 실루엣과 회전하는 별빛으로 첨성대의 밤하늘을 AI 영상으로 상상해봤습니다."
   }
 ];

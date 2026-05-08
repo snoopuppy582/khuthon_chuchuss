@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Images, Music, QrCode, Share2, Video } from "lucide-react";
+import { Images, Music, QrCode, Repeat2, Video } from "lucide-react";
 import { getStyleLabel } from "@/data/contentMap";
 import { useAppStore } from "@/store/useAppStore";
 
@@ -52,7 +52,7 @@ export function ResultDisplay() {
       ) : null}
 
       <button className="secondary-command" type="button" onClick={() => setPanelMode("create")}>
-        <Share2 size={18} />
+        <Repeat2 size={18} />
         다른 형식으로 다시 만들기
       </button>
       <button className="command-button" type="button" onClick={() => setPanelMode("qr")}>
