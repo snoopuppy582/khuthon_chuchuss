@@ -2,6 +2,8 @@
 
 전통문화의 단절을 3D 체험, AI 창작, 실제 방문 QR로 잇는 해커톤 MVP입니다.
 
+공개 배포: https://ieojulge.vercel.app
+
 ## 구조
 
 - `01_기획.md` - 문제 정의와 서비스 기획
@@ -30,7 +32,7 @@ NEXT_PUBLIC_AUDIENCE_SITE_URL=
 ## QR 구분
 
 - 로컬 시연: `/experience`
-- 관객용 QR: `/offline/cheomseongdae`
+- 관객용 QR: `https://ieojulge.vercel.app/offline/cheomseongdae`
 - Vercel 공개 배포에는 OpenAI API 키를 넣지 않으면 AI 생성은 백업 이미지로 동작합니다.
 
 ## Vercel 배포
