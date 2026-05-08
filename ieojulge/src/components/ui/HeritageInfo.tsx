@@ -18,11 +18,7 @@ export function HeritageInfo() {
         <span>{cheomseongdaeInfo.location}</span>
       </div>
 
-      <ul className="plain-list">
-        {cheomseongdaeInfo.bullets.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
+      <p className="heritage-connection">{cheomseongdaeInfo.connectionLine}</p>
 
       <button className="command-button" type="button" onClick={() => setPanelMode("create")}>
         AI 콘텐츠 창작하기

@@ -59,15 +59,8 @@ export const contentMap: Record<CreationStyle, ContentPreset> = {
         id: "cheomseongdae-starlight-song-1",
         title: "선덕여왕의 별노래",
         src: "/media/cheomseongdae_starlight_song_01.mp3",
-        poster: "/media/cheomseongdae_poster_01.svg",
+        poster: "/media/cheomseongdae_song_artwork.jpg",
         description: "첨성대와 별빛, 선덕여왕의 밤을 떠올리며 만든 오디오 콘텐츠입니다."
-      },
-      {
-        id: "cheomseongdae-starlight-song-2",
-        title: "첨성대의 별빛 2",
-        src: "/media/cheomseongdae_starlight_song_02.mp3",
-        poster: "/media/community/dummy_galaxy.svg",
-        description: "같은 주제를 다른 분위기로 이어 만든 두 번째 오디오 콘텐츠입니다."
       }
     ],
     videos: [
@@ -75,7 +68,7 @@ export const contentMap: Record<CreationStyle, ContentPreset> = {
         id: "cheomseongdae-starlight-film",
         title: "첨성대의 별빛",
         src: "/media/cheomseongdae_starlight_film.mp4",
-        poster: "/media/cheomseongdae-hero.png",
+        poster: "/media/cheomseongdae_starlight_film_poster.png",
         description: "선덕여왕의 실루엣과 회전하는 별빛으로 첨성대의 밤하늘을 AI 영상으로 상상해봤습니다."
       }
     ],
@@ -85,11 +78,11 @@ export const contentMap: Record<CreationStyle, ContentPreset> = {
     style: "cyber-silla",
     songs: [
       {
-        id: "cyber-silla-rhythm",
-        title: "사이버 신라 리듬",
-        src: "/media/cheomseongdae_starlight_song_02.mp3",
-        poster: "/media/cheomseongdae_poster_02.svg",
-        description: "신라 문양과 전자음을 결합한다는 설정의 백업 오디오입니다."
+        id: "cheomseongdae-starlight-song-1",
+        title: "선덕여왕의 별노래",
+        src: "/media/cheomseongdae_starlight_song_01.mp3",
+        poster: "/media/cheomseongdae_song_artwork.jpg",
+        description: "첨성대와 별빛, 선덕여왕의 밤을 떠올리며 만든 오디오 콘텐츠입니다."
       }
     ],
     videos: [
@@ -106,11 +99,11 @@ export const contentMap: Record<CreationStyle, ContentPreset> = {
     style: "dream-night",
     songs: [
       {
-        id: "gyeongju-night-sky",
-        title: "경주의 밤하늘",
+        id: "cheomseongdae-starlight-song-1",
+        title: "선덕여왕의 별노래",
         src: "/media/cheomseongdae_starlight_song_01.mp3",
-        poster: "/media/cheomseongdae_poster_03.svg",
-        description: "몽환적인 별빛 분위기의 백업 오디오입니다."
+        poster: "/media/cheomseongdae_song_artwork.jpg",
+        description: "첨성대와 별빛, 선덕여왕의 밤을 떠올리며 만든 오디오 콘텐츠입니다."
       }
     ],
     videos: [

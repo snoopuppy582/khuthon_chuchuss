@@ -28,7 +28,7 @@ export const communityFeed: CommunityItem[] = [
     type: "song",
     title: "선덕여왕의 별노래",
     src: "/media/cheomseongdae_starlight_song_01.mp3",
-    previewImage: "/media/cheomseongdae_poster_01.svg",
+    previewImage: "/media/cheomseongdae_song_artwork.jpg",
     style: "starlight-gukak",
     description: "첨성대와 별빛, 선덕여왕의 밤을 떠올리며 만든 오디오 콘텐츠"
   },
@@ -38,7 +38,7 @@ export const communityFeed: CommunityItem[] = [
     type: "video",
     title: "첨성대의 별빛",
     src: "/media/cheomseongdae_starlight_film.mp4",
-    previewImage: "/media/cheomseongdae-hero.png",
+    previewImage: "/media/cheomseongdae_starlight_film_poster.png",
     style: "starlight-gukak",
     description: "선덕여왕의 실루엣과 회전하는 별빛으로 첨성대의 밤하늘을 AI 영상으로 상상해봤습니다."
   }

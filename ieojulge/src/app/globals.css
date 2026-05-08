@@ -339,6 +339,12 @@ button:disabled {
   line-height: 1.5;
 }
 
+.heritage-connection {
+  border-left: 2px solid rgba(215, 173, 88, 0.76);
+  background: rgba(215, 173, 88, 0.08);
+  padding: 12px 14px;
+}
+
 .control-group {
   display: grid;
   gap: 10px;
@@ -456,6 +462,7 @@ button:disabled {
 
 .video-player {
   width: 100%;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;

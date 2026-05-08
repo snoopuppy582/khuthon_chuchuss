@@ -20,13 +20,19 @@ export function ResultDisplay() {
       <p className="eyebrow">경험을 잇다</p>
       <h2>{result.title}</h2>
 
-      <div className="result-preview">
-        <Image src={result.previewImage} alt={result.title} fill sizes="360px" unoptimized />
-        <div className="result-badge">
-          <TypeIcon size={16} />
-          {result.type}
+      {result.type === "video" && result.src ? (
+        <video className="video-player" controls poster={result.previewImage} src={result.src}>
+          영상을 재생할 수 없습니다.
+        </video>
+      ) : (
+        <div className="result-preview">
+          <Image src={result.previewImage} alt={result.title} fill sizes="360px" unoptimized />
+          <div className="result-badge">
+            <TypeIcon size={16} />
+            {result.type}
+          </div>
         </div>
-      </div>
+      )}
 
       <p>{result.description}</p>
       <div className="meta-row">
@@ -40,11 +46,7 @@ export function ResultDisplay() {
         </audio>
       )}
 
-      {result.type === "video" && result.src ? (
-        <video className="video-player" controls poster={result.previewImage} src={result.src}>
-          영상을 재생할 수 없습니다.
-        </video>
-      ) : result.type === "video" ? (
+      {result.type === "video" && !result.src ? (
         <div className="video-fallback">
           <span />
           <p>백업 영상 장면</p>
