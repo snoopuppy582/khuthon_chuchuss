@@ -103,6 +103,14 @@ function SignBoard() {
 
   return (
     <group position={[3.02, 0.02, 1.28]} rotation={[0, -0.28, 0]} scale={0.72}>
+      <mesh castShadow receiveShadow position={[0, 1.09, -0.03]}>
+        <boxGeometry args={[1.58, 0.12, 0.18]} />
+        <meshStandardMaterial color="#261d16" roughness={0.78} />
+      </mesh>
+      <mesh castShadow receiveShadow position={[0, 1.18, -0.03]} rotation={[0, 0, 0.02]}>
+        <boxGeometry args={[1.44, 0.08, 0.22]} />
+        <meshStandardMaterial color="#5d503c" roughness={0.72} />
+      </mesh>
       <mesh castShadow receiveShadow position={[-0.46, 0.42, -0.04]}>
         <boxGeometry args={[0.08, 0.84, 0.08]} />
         <meshStandardMaterial color="#4e3d2c" roughness={0.78} />
@@ -123,6 +131,11 @@ function SignBoard() {
         <boxGeometry args={[1.48, 0.1, 0.34]} />
         <meshStandardMaterial color="#5d503c" roughness={0.78} />
       </mesh>
+      <mesh castShadow receiveShadow position={[0, 0.04, 0]}>
+        <boxGeometry args={[1.18, 0.08, 0.46]} />
+        <meshStandardMaterial color="#3f3b32" roughness={0.96} />
+      </mesh>
+      <pointLight position={[0, 0.84, 0.18]} color="#f0c66a" intensity={0.18} distance={1.7} />
     </group>
   );
 }

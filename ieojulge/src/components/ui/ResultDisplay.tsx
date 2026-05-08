@@ -40,12 +40,16 @@ export function ResultDisplay() {
         </audio>
       )}
 
-      {result.type === "video" && (
+      {result.type === "video" && result.src ? (
+        <video className="video-player" controls poster={result.previewImage} src={result.src}>
+          영상을 재생할 수 없습니다.
+        </video>
+      ) : result.type === "video" ? (
         <div className="video-fallback">
           <span />
           <p>백업 영상 장면</p>
         </div>
-      )}
+      ) : null}
 
       <button className="secondary-command" type="button" onClick={() => setPanelMode("create")}>
         <Share2 size={18} />

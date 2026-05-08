@@ -11,6 +11,9 @@ three.js-master/
 *.log
 *.tsbuildinfo
 /*.png
+/*.mp3
+/*.mp4
+/*.wav
 public/generated/
 test-artifacts/
 .next-dev-logs/

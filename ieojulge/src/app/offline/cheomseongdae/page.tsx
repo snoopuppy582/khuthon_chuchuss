@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink, Eye, MapPin, Route, Sparkles } from "lucide-react";
+import { ArrowLeft, Clock, ExternalLink, Eye, MapPin, Navigation, Route, Sparkles } from "lucide-react";
 
 const courseItems = [
   { name: "동궁과 월지", time: "도보 약 10분", note: "밤 풍경이 좋은 신라 궁궐 유적" },
@@ -12,6 +12,12 @@ const visitPoints = [
   { title: "돌의 층", text: "3D에서 본 석재의 결을 현장에서 다시 확인" },
   { title: "창의 방향", text: "첨성대 중앙 창이 만든 관찰의 감각 보기" },
   { title: "밤의 분위기", text: "별을 보던 장소라는 기억으로 다시 바라보기" }
+];
+
+const bridgeSteps = [
+  { label: "01", title: "먼저 보다", text: "3D 공간에서 첨성대의 형태를 기억합니다." },
+  { label: "02", title: "직접 만들다", text: "AI 창작으로 문화 경험에 참여합니다." },
+  { label: "03", title: "현장으로 잇다", text: "QR을 통해 실제 방문 정보로 이동합니다." }
 ];
 
 export default function OfflineCheomseongdaePage() {
@@ -31,17 +37,71 @@ export default function OfflineCheomseongdaePage() {
           <ArrowLeft size={18} />
           3D 체험으로 돌아가기
         </Link>
-        <div className="offline-copy">
-          <p className="eyebrow">관객용 QR 연결</p>
-          <h1>첨성대 방문 정보</h1>
+        <div className="offline-hero-inner">
+          <div className="offline-copy">
+            <p className="eyebrow">관객용 QR 연결</p>
+            <h1>첨성대 방문 정보</h1>
+            <p>
+              3D 체험에서 생긴 관심이 실제 경주 방문으로 이어지도록 핵심 정보만 보여줍니다.
+            </p>
+            <div className="offline-actions">
+              <Link className="command-button" href="/experience">
+                <Sparkles size={18} />
+                공개 3D 체험 보기
+              </Link>
+            </div>
+          </div>
+
+          <aside className="offline-quick-card">
+            <strong>QR로 이어진 다음 행동</strong>
+            <div>
+              <MapPin size={18} />
+              <span>경주시 인왕동 첨성대</span>
+            </div>
+            <div>
+              <Clock size={18} />
+              <span>권장 흐름: 첨성대 → 동궁과 월지 → 월정교</span>
+            </div>
+            <div>
+              <Navigation size={18} />
+              <span>도보 산책 중심의 짧은 방문 코스</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section className="bridge-step-section">
+        {bridgeSteps.map((item) => (
+          <article className="bridge-step-item" key={item.label}>
+            <span>{item.label}</span>
+            <div>
+              <strong>{item.title}</strong>
+              <p>{item.text}</p>
+            </div>
+          </article>
+        ))}
+      </section>
+
+      <section className="visit-summary-section">
+        <div className="visit-summary-copy">
+          <p className="eyebrow">현장 방문 요약</p>
+          <h2>스캔한 순간부터 실제 장소까지</h2>
           <p>
-            3D 체험에서 생긴 관심이 실제 경주 방문으로 이어지도록 핵심 정보만 보여줍니다.
+            관객은 발표장에서 QR을 스캔하고, 첨성대의 위치와 관람 포인트, 주변 코스를 한 화면에서 확인합니다.
           </p>
-          <div className="offline-actions">
-            <Link className="command-button" href="/experience">
-              <Sparkles size={18} />
-              공개 3D 체험 보기
-            </Link>
+        </div>
+        <div className="visit-summary-card">
+          <div>
+            <span>장소</span>
+            <strong>경주 첨성대</strong>
+          </div>
+          <div>
+            <span>핵심 경험</span>
+            <strong>별을 보던 장소를 다시 보기</strong>
+          </div>
+          <div>
+            <span>연결 방식</span>
+            <strong>3D 체험 → AI 창작 → QR 방문</strong>
           </div>
         </div>
       </section>

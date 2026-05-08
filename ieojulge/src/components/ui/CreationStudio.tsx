@@ -1,7 +1,7 @@
 "use client";
 
 import { ImageIcon, Loader2, Music, Sparkles, Video } from "lucide-react";
-import { contentMap, getStyleLabel, styleOptions, type CreationFormat } from "@/data/contentMap";
+import { getMediaVariant, getStyleLabel, styleOptions, type CreationFormat } from "@/data/contentMap";
 import { useAppStore } from "@/store/useAppStore";
 import type { CommunityItem } from "@/data/communityFeed";
 
@@ -55,15 +55,15 @@ export function CreationStudio() {
         return;
       }
 
-      const preset = contentMap[selectedStyle];
-      const media = selectedFormat === "song" ? preset.song : preset.video;
+      const seed = Date.now();
+      const media = getMediaVariant(selectedStyle, selectedFormat, seed);
       const item: CommunityItem = {
-        id: `generated-${Date.now()}`,
+        id: `generated-${seed}`,
         author: "나",
         type: selectedFormat,
         title: media.title,
-        src: selectedFormat === "song" ? preset.song.src : undefined,
-        previewImage: selectedFormat === "song" ? preset.song.poster : preset.video.poster,
+        src: media.src,
+        previewImage: media.poster,
         style: selectedStyle,
         description: media.description
       };

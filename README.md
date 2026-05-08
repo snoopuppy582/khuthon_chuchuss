@@ -47,3 +47,13 @@ NEXT_PUBLIC_AUDIENCE_SITE_URL=https://배포주소
 ```
 
 OpenAI 키는 발표 로컬 시연에서만 쓰는 것을 권장합니다.
+
+## 미디어 교체
+
+이미지, 노래, 영상 파일은 `ieojulge/public/media`에 넣고 `ieojulge/src/data/contentMap.ts`에서 교체합니다.
+
+- 노래는 `songs` 배열에 추가
+- 영상은 `videos` 배열에 추가
+- 영상 파일이 있으면 `src: "/media/파일명.mp4"`를 넣고, 없으면 `poster`만으로 백업 장면처럼 표시
+
+노래나 영상이 2개 이상이어도 배열에 항목만 추가하면 앱이 자동으로 사용할 수 있습니다.

@@ -446,6 +446,14 @@ button:disabled {
   width: 100%;
 }
 
+.video-player {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #080c0b;
+}
+
 .video-fallback {
   position: relative;
   display: grid;
@@ -553,9 +561,17 @@ button:disabled {
     linear-gradient(180deg, rgba(12, 18, 16, 0.18) 0%, rgba(12, 18, 16, 0.86) 100%);
 }
 
-.offline-copy {
+.offline-hero-inner {
   position: relative;
   z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
+  gap: clamp(24px, 5vw, 64px);
+  align-items: end;
+}
+
+.offline-copy {
+  position: relative;
   width: min(640px, 100%);
 }
 
@@ -578,12 +594,137 @@ button:disabled {
   margin-top: 24px;
 }
 
+.offline-quick-card {
+  display: grid;
+  gap: 14px;
+  border: 1px solid rgba(255, 248, 236, 0.22);
+  border-radius: 8px;
+  background: rgba(11, 17, 15, 0.72);
+  padding: 20px;
+  backdrop-filter: blur(12px);
+}
+
+.offline-quick-card strong {
+  color: #ffe4a4;
+  font-size: 1.04rem;
+}
+
+.offline-quick-card div {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  border-top: 1px solid rgba(255, 248, 236, 0.13);
+  padding-top: 13px;
+  color: #eee4d3;
+  line-height: 1.45;
+}
+
 .offline-grid,
+.bridge-step-section,
+.visit-summary-section,
 .qr-role-section,
 .visit-point-section,
 .course-section {
   width: min(1120px, calc(100% - 36px));
   margin: 0 auto;
+}
+
+.bridge-step-section {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: -34px;
+  position: relative;
+  z-index: 4;
+}
+
+.bridge-step-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  border: 1px solid rgba(23, 35, 31, 0.14);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 18px;
+  box-shadow: 0 18px 34px rgba(23, 35, 31, 0.1);
+}
+
+.bridge-step-item > span {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: #17231f;
+  color: #dfb457;
+  font-weight: 900;
+}
+
+.bridge-step-item strong {
+  font-size: 1.04rem;
+}
+
+.bridge-step-item p {
+  margin: 6px 0 0;
+  color: #526058;
+  line-height: 1.52;
+}
+
+.visit-summary-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  gap: 24px;
+  align-items: stretch;
+  padding: 34px 0 4px;
+}
+
+.visit-summary-copy {
+  border-left: 3px solid #8e2f2b;
+  padding-left: 18px;
+}
+
+.visit-summary-copy h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.16;
+}
+
+.visit-summary-copy p:not(.eyebrow) {
+  width: min(620px, 100%);
+  color: #526058;
+  line-height: 1.68;
+}
+
+.visit-summary-card {
+  display: grid;
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid rgba(23, 35, 31, 0.16);
+  border-radius: 8px;
+  background: #17231f;
+  color: #fff8ec;
+}
+
+.visit-summary-card div {
+  display: grid;
+  gap: 4px;
+  border-bottom: 1px solid rgba(255, 248, 236, 0.12);
+  padding: 16px 18px;
+}
+
+.visit-summary-card div:last-child {
+  border-bottom: 0;
+}
+
+.visit-summary-card span {
+  color: #dfb457;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.visit-summary-card strong {
+  font-size: 1.02rem;
 }
 
 .offline-grid {
@@ -768,6 +909,16 @@ button:disabled {
     bottom: 14px;
   }
 
+  .offline-hero-inner,
+  .visit-summary-section {
+    grid-template-columns: 1fr;
+  }
+
+  .bridge-step-section {
+    margin-top: 18px;
+  }
+
+  .bridge-step-section,
   .offline-grid,
   .qr-role-section,
   .visit-point-list,
