@@ -16,7 +16,7 @@ export function LandingPage() {
           sizes="100vw"
         />
         <div className="landing-scrim" aria-hidden="true" />
-        <ConstellationBackdrop />
+        <ConstellationBackdrop className="landing-moon-backdrop" showConstellations={false} />
 
         <div className="landing-content">
           <p className="eyebrow">단절을 잇는 전통문화 체험</p>

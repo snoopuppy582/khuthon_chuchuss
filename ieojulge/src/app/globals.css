@@ -141,6 +141,29 @@ button:disabled {
   opacity: 0.78;
 }
 
+.experience-sky-backdrop {
+  z-index: 1;
+  overflow: hidden;
+}
+
+.experience-sky-backdrop .hero-moon-image {
+  top: clamp(76px, 11vh, 118px);
+  right: clamp(28px, 7vw, 112px);
+  width: clamp(84px, 10vw, 156px);
+  opacity: 0.68;
+  filter: drop-shadow(0 0 30px rgba(232, 219, 188, 0.2));
+}
+
+.experience-sky-backdrop .constellation-map {
+  top: 34px;
+  height: 48%;
+  opacity: 0.56;
+}
+
+.experience-sky-backdrop .constellation {
+  stroke: rgba(247, 241, 231, 0.46);
+}
+
 .landing-content {
   position: relative;
   z-index: 2;
@@ -316,6 +339,7 @@ button:disabled {
   position: absolute;
   left: 24px;
   bottom: 24px;
+  z-index: 3;
   border: 1px solid rgba(215, 173, 88, 0.32);
   border-radius: 8px;
   background: rgba(6, 12, 13, 0.72);
@@ -698,7 +722,6 @@ button:disabled {
 .offline-grid,
 .bridge-step-section,
 .visit-summary-section,
-.qr-role-section,
 .visit-point-section,
 .course-section {
   width: min(1120px, calc(100% - 36px));
@@ -833,32 +856,6 @@ button:disabled {
 .info-band a {
   color: #8e2f2b;
   font-weight: 800;
-}
-
-.qr-role-section {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  padding: 12px 0 18px;
-}
-
-.qr-role-section article {
-  border: 1px solid rgba(23, 35, 31, 0.16);
-  border-radius: 8px;
-  background: #1a2621;
-  color: #fff8ec;
-  padding: 18px;
-}
-
-.qr-role-section strong {
-  color: #dfb457;
-  font-size: 1.04rem;
-}
-
-.qr-role-section p {
-  margin: 8px 0 0;
-  color: #ded7c9;
-  line-height: 1.55;
 }
 
 .visit-point-section {
@@ -996,7 +993,6 @@ button:disabled {
 
   .bridge-step-section,
   .offline-grid,
-  .qr-role-section,
   .visit-point-list,
   .course-list {
     grid-template-columns: 1fr;

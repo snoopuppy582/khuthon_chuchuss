@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Clock, ExternalLink, Eye, MapPin, Navigation, Route, Sparkles } from "lucide-react";
-import { ConstellationBackdrop } from "@/components/ui/ConstellationBackdrop";
 
 const courseItems = [
   { name: "동궁과 월지", time: "도보 약 10분", note: "밤 풍경이 좋은 신라 궁궐 유적" },
@@ -34,7 +33,6 @@ export default function OfflineCheomseongdaePage() {
           sizes="100vw"
         />
         <div className="offline-scrim" aria-hidden="true" />
-        <ConstellationBackdrop />
         <Link className="ghost-link" href="/experience">
           <ArrowLeft size={18} />
           3D 체험으로 돌아가기
@@ -125,17 +123,6 @@ export default function OfflineCheomseongdaePage() {
               국가유산포털에서 상세 정보 확인
             </a>
           </div>
-        </article>
-      </section>
-
-      <section className="qr-role-section">
-        <article>
-          <strong>발표자 시연</strong>
-          <p>로컬 환경에서 3D 체험과 OpenAI 생성을 보여줍니다.</p>
-        </article>
-        <article>
-          <strong>관객용 QR</strong>
-          <p>공개 방문 정보 페이지로 연결되어 실제 장소까지 이어집니다.</p>
         </article>
       </section>
 
