@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { ConstellationBackdrop } from "@/components/ui/ConstellationBackdrop";
 
 export function LandingPage() {
   return (
@@ -15,6 +16,7 @@ export function LandingPage() {
           sizes="100vw"
         />
         <div className="landing-scrim" aria-hidden="true" />
+        <ConstellationBackdrop />
 
         <div className="landing-content">
           <p className="eyebrow">단절을 잇는 전통문화 체험</p>
