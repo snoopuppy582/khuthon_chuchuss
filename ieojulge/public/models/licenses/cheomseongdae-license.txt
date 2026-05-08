@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cheomseongdae Observatory (첨성대)
+* source:	https://sketchfab.com/3d-models/cheomseongdae-observatory-d601340170384b0d8e3b40aa0c829a8f
+* author:	lacomi1975 (https://sketchfab.com/lacomi1975)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cheomseongdae Observatory (첨성대)" (https://sketchfab.com/3d-models/cheomseongdae-observatory-d601340170384b0d8e3b40aa0c829a8f) by lacomi1975 (https://sketchfab.com/lacomi1975) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,17 @@
+.env*
+!.env.example
+node_modules/
+.next/
+out/
+dist/
+coverage/
+.vercel/
+.tools/
+three.js-master/
+*.log
+*.tsbuildinfo
+/*.png
+public/generated/
+test-artifacts/
+.next-dev-logs/
+ieojulge/public/models/*.zip

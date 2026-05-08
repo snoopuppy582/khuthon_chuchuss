@@ -1,0 +1,3 @@
+public/models/*.zip
+test-artifacts/
+.next-dev-logs/
