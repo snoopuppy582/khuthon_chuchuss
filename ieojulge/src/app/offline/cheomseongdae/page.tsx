@@ -15,9 +15,9 @@ const visitPoints = [
 ];
 
 const bridgeSteps = [
-  { label: "01", title: "먼저 보다", text: "3D 공간에서 첨성대의 형태를 기억합니다." },
-  { label: "02", title: "직접 만들다", text: "AI 창작으로 문화 경험에 참여합니다." },
-  { label: "03", title: "현장으로 잇다", text: "QR을 통해 실제 방문 정보로 이동합니다." }
+  { label: "01", title: "접근을 잇다", text: "3D 공간에서 첨성대의 형태를 기억합니다." },
+  { label: "02", title: "참여를 잇다", text: "AI 창작으로 문화 경험에 참여합니다." },
+  { label: "03", title: "경험을 잇다", text: "QR을 통해 실제 방문 정보로 이동합니다." }
 ];
 
 export default function OfflineCheomseongdaePage() {
@@ -42,7 +42,7 @@ export default function OfflineCheomseongdaePage() {
             <p className="eyebrow">관객용 QR 연결</p>
             <h1>첨성대 방문 정보</h1>
             <p>
-              3D 체험에서 생긴 관심이 실제 경주 방문으로 이어지도록 핵심 정보만 보여줍니다.
+              3D 체험을 즐기셨다면, 실제 첨성대를 방문해보는 것은 어떠신가요?
             </p>
             <div className="offline-actions">
               <Link className="command-button" href="/experience">

@@ -79,9 +79,9 @@ export function CreationStudio() {
 
   return (
     <div className="panel-section">
-      <p className="eyebrow">소비를 잇다</p>
+      <p className="eyebrow">참여를 잇다</p>
       <h2>AI 콘텐츠 창작</h2>
-      <p>전통문화 요소를 이미지, 노래, 영상 형식으로 바꿔 직접 참여합니다.</p>
+      <p>전통문화 요소를 이미지, 노래, 영상 형식으로 바꿔 창작합니다.</p>
 
       <div className="control-group">
         <span className="control-label">프롬프트 빠른 적용</span>

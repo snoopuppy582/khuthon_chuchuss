@@ -22,7 +22,7 @@ export function LandingPage() {
           <p className="eyebrow">단절을 잇는 전통문화 체험</p>
           <h1>이어줄게</h1>
           <p className="hero-subtitle">
-            3D 체험과 AI 창작으로 전통문화의 접근, 소비, 실제 방문을 하나의 흐름으로 잇습니다.
+            3D 체험과 AI 창작으로 전통문화의 접근, 참여, 실제 방문을 하나의 흐름으로 잇습니다.
           </p>
 
           <div className="hero-actions">

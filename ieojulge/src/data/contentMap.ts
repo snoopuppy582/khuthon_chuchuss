@@ -60,7 +60,7 @@ export const contentMap: Record<CreationStyle, ContentPreset> = {
         title: "선덕여왕의 별노래",
         src: "/media/cheomseongdae_starlight_song_01.mp3",
         poster: "/media/cheomseongdae_song_artwork.jpg",
-        description: "첨성대와 별빛, 선덕여왕의 밤을 떠올리며 만든 오디오 콘텐츠입니다."
+        description: "선덕여왕이 별을 보며 부른 노래를 상상해봤습니다."
       }
     ],
     videos: [
@@ -69,7 +69,7 @@ export const contentMap: Record<CreationStyle, ContentPreset> = {
         title: "첨성대의 별빛",
         src: "/media/cheomseongdae_starlight_film.mp4",
         poster: "/media/cheomseongdae_starlight_film_poster.png",
-        description: "선덕여왕의 실루엣과 회전하는 별빛으로 첨성대의 밤하늘을 AI 영상으로 상상해봤습니다."
+        description: "아름다운 밤 하늘 아래 첨성대의 모습입니다."
       }
     ],
     fallbackImages: ["/media/cheomseongdae_cute_image.png", "/media/cheomseongdae_poster_01.svg"]
@@ -82,7 +82,7 @@ export const contentMap: Record<CreationStyle, ContentPreset> = {
         title: "선덕여왕의 별노래",
         src: "/media/cheomseongdae_starlight_song_01.mp3",
         poster: "/media/cheomseongdae_song_artwork.jpg",
-        description: "첨성대와 별빛, 선덕여왕의 밤을 떠올리며 만든 오디오 콘텐츠입니다."
+        description: "선덕여왕이 별을 보며 부른 노래를 상상해봤습니다."
       }
     ],
     videos: [
@@ -103,7 +103,7 @@ export const contentMap: Record<CreationStyle, ContentPreset> = {
         title: "선덕여왕의 별노래",
         src: "/media/cheomseongdae_starlight_song_01.mp3",
         poster: "/media/cheomseongdae_song_artwork.jpg",
-        description: "첨성대와 별빛, 선덕여왕의 밤을 떠올리며 만든 오디오 콘텐츠입니다."
+        description: "선덕여왕이 별을 보며 부른 노래를 상상해봤습니다."
       }
     ],
     videos: [
