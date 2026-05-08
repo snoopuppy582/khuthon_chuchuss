@@ -3,7 +3,6 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Home, RotateCcw } from "lucide-react";
-import { ConstellationBackdrop } from "./ConstellationBackdrop";
 import { SidePanel } from "./SidePanel";
 import { useAppStore } from "@/store/useAppStore";
 
@@ -36,7 +35,6 @@ export function ExperienceShell() {
       <section className="experience-layout">
         <div className="scene-wrap">
           <HeritageScene />
-          <ConstellationBackdrop className="experience-sky-backdrop" />
           <div className="scene-caption">
             <span>첨성대 클릭 → AI 창작</span>
           </div>

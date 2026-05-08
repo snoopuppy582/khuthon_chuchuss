@@ -141,29 +141,6 @@ button:disabled {
   opacity: 0.78;
 }
 
-.experience-sky-backdrop {
-  z-index: 1;
-  overflow: hidden;
-}
-
-.experience-sky-backdrop .hero-moon-image {
-  top: clamp(76px, 11vh, 118px);
-  right: clamp(28px, 7vw, 112px);
-  width: clamp(84px, 10vw, 156px);
-  opacity: 0.68;
-  filter: drop-shadow(0 0 30px rgba(232, 219, 188, 0.2));
-}
-
-.experience-sky-backdrop .constellation-map {
-  top: 34px;
-  height: 48%;
-  opacity: 0.56;
-}
-
-.experience-sky-backdrop .constellation {
-  stroke: rgba(247, 241, 231, 0.46);
-}
-
 .landing-content {
   position: relative;
   z-index: 2;

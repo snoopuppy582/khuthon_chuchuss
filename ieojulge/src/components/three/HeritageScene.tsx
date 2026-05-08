@@ -4,6 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { ContactShadows, OrbitControls, Stars } from "@react-three/drei";
 import { Suspense } from "react";
 import * as THREE from "three";
+import { CelestialSky } from "./CelestialSky";
 import { Cheomseongdae } from "./Cheomseongdae";
 import { GalleryWall } from "./GalleryWall";
 import { GroundPath } from "./GroundPath";
@@ -39,6 +40,7 @@ export function HeritageScene() {
       <Suspense fallback={null}>
         <Stars radius={80} depth={28} count={1400} factor={3.4} saturation={0.15} fade speed={0.18} />
         <StarField />
+        <CelestialSky />
         <GroundPath />
         <WoljeonggyoPier />
         <HeritageEnvironment />
